@@ -18,7 +18,7 @@ export default function MainContainer() {
     <Box sx={{ flexGrow: 1 }} className="mainContainer">
       <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, md: 8 }}  >
         
-        <Grid item xs={12} sm={6} md={4} className="repo-grid">
+        <Grid item xs={12} sm={6} md={4}>
           <Item>
             <RepoList />
           </Item>

@@ -11,22 +11,27 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: "center",
   color: theme.palette.text.secondary,
-  
 }));
 
 // eslint-disable-next-line react/prop-types
 export default function ResponsiveGrid({ repos }) {
   return (
-    <Box sx={{ flexGrow: 1 }} className='repo-det-box'>
-      <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 8,  }}>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8 }}>
         {repos.map((repo, index) => (
-          <Grid item xs={12} sm={8} md={6} lg={4} xl={2}  key={index}>
-            
+          <Grid item xs={12} sm={8} md={6} lg={4} xl={2} key={index}>
             <Item>
-              <h3><Link to={`/repo/${repo.name}`} className= 'link-style'>{repo.name}</Link></h3>
+              <h3>
+                <Link to={`/repo/${repo.name}`} className="link-style">
+                  {repo.name}
+                </Link>
+              </h3>
               <p className="profile">{repo.description}</p>
               <p className="profile">Stars: {repo.stargazers_count}</p>
-              <p className="profile"> Language: {repo.language === null ? "none" : repo.language}</p>
+              <p className="profile">
+                {" "}
+                Language: {repo.language === null ? "none" : repo.language}
+              </p>
               <p className="profile">Visibility: {repo.visibility}</p>
               <p className="profile">Forks: {repo.forks}</p>
             </Item>

@@ -47,18 +47,19 @@ function RepoList() {
     setPage((prevPage) => Math.min(prevPage + 1));
   };
 
- 
   return (
     <div>
       <h1 className="profile">Github Repositories</h1>
       <input
-      className="search-input"
+        className="search-input"
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search repositories..."
       />
-      <button className="search-btn" onClick={fetchRepos}>Search</button>
+      <button className="search-btn" onClick={fetchRepos}>
+        Search
+      </button>
       <br /> <br />
       <ResponsiveGrid repos={repos} /> <br />
       <div>
