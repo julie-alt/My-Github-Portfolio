@@ -1,6 +1,6 @@
 # My Github Portfolio
 
-My GitHub Portfolio is a repository viewer web application that allows users view repositories owned by me. This app provides a simple and intuitive interface for browsing repositories and their details.
+My GitHub Portfolio is a repository viewer web application that allows users view my repositories. This app provides a simple and intuitive interface for browsing repositories and their details.
 
 ## Features
 
